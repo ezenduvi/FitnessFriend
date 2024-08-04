@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.ExerciseItemPageActivity">
+
+    <include
+        layout="@layout/food_item_toolbar"
+        android:id="@+id/toolbarSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="-2dp" />
+
+    <ImageView
+        android:id="@+id/addExercise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="545dp"
+        android:layout_marginTop="17dp"
+        android:onClick="addExerciseOnClick"
+        android:src="@drawable/ic_baseline_check_24" />
+
+    <!-- Editext for Search -->
+    <EditText
+        android:id="@+id/exerciseDuration"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbarSection"
+        android:hint="Choose minutes exercised.."
+        android:inputType="textVisiblePassword"
+        android:padding="20dp" />
+
+    <!--    <ScrollView-->
+    <!--        android:id="@+id/scrollView2"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:layout_below="@+id/toolbarSection"-->
+    <!--        android:layout_marginTop="63dp"-->
+    <!--        android:paddingBottom="5dp">-->
+
+    <ListView
+        android:id="@+id/layout_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/exerciseDuration"
+        android:layout_marginTop="-2dp"
+        android:orientation="vertical" />
+
+    <!--    </ScrollView>-->
+
+</RelativeLayout>

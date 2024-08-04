@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/toolbarSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="-2dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/toolbarSection">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="June 7th - June 13th"
+                android:textColor="@color/purple_600"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="20dp"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Calories"
+                android:textColor="@color/white"
+                android:background="@color/purple_600"
+                android:paddingLeft="20dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:textSize="18sp"
+                android:layout_marginTop="70dp"
+                android:textStyle="bold" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/barChart"
+                android:layout_width="468dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="125dp"
+                android:layout_marginStart="50dp"
+                android:layout_centerHorizontal="true"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="125dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Monday"
+                    android:padding="5dp"
+                    android:layout_marginTop="300dp"
+                    android:layout_marginStart="50dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:layout_width="77dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="300dp"
+                    android:layout_marginStart="475dp"
+                    android:padding="5dp"
+                    android:text="1,400"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Tuesday"
+                    android:padding="5dp"
+                    android:layout_marginTop="330dp"
+                    android:layout_marginStart="50dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:layout_width="77dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="330dp"
+                    android:layout_marginStart="475dp"
+                    android:padding="5dp"
+                    android:text="1,400"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Wednesday"
+                    android:padding="5dp"
+                    android:layout_marginTop="360dp"
+                    android:layout_marginStart="50dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:layout_width="77dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="360dp"
+                    android:layout_marginStart="475dp"
+                    android:padding="5dp"
+                    android:text="1,400"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Thursday"
+                    android:padding="5dp"
+                    android:layout_marginTop="390dp"
+                    android:layout_marginStart="50dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:layout_width="77dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="390dp"
+                    android:layout_marginStart="475dp"
+                    android:padding="5dp"
+                    android:text="1,400"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Friday"
+                    android:padding="5dp"
+                    android:layout_marginTop="420dp"
+                    android:layout_marginStart="50dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:layout_width="77dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="420dp"
+                    android:layout_marginStart="475dp"
+                    android:padding="5dp"
+                    android:text="1,400"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Saturday"
+                    android:padding="5dp"
+                    android:layout_marginTop="450dp"
+                    android:layout_marginStart="50dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:layout_width="77dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="450dp"
+                    android:layout_marginStart="475dp"
+                    android:padding="5dp"
+                    android:text="1,400"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sunday"
+                    android:padding="5dp"
+                    android:layout_marginTop="480dp"
+                    android:layout_marginStart="50dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:layout_width="77dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="480dp"
+                    android:layout_marginStart="475dp"
+                    android:padding="5dp"
+                    android:text="1,400"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

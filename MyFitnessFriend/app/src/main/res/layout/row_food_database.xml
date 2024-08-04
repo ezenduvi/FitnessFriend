@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/EntryName"
+        android:layout_width="500dp"
+        android:layout_height="55dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="5dp"
+        android:text="Scrambled Eggs"
+        android:textColor="@color/black"
+        android:textSize="22dp" />

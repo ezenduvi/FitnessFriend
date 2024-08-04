@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/toolbarSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="-2dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/today"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Tuesday, June 15th 2021"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:textColor="@color/purple_700"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/dailyCalories"
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/today"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="5dp"
+            android:text="Calories"
+            android:textColor="@color/black"
+            android:textSize="22dp" />
+
+        <TextView
+            android:id="@+id/dailyCalorieNumber"
+            android:layout_width="100dp"
+            android:layout_height="55dp"
+            android:gravity="center"
+            android:text="182"
+            android:paddingTop="@dimen/food_number_field_top_padding"
+            android:textColor="@color/purple_700"
+            android:textSize="22dp"
+            android:layout_toRightOf="@+id/dailyCalories"
+            android:layout_below="@id/today" />
+
+        <TextView
+            android:id="@+id/dailyWater"
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/black"
+            android:textSize="22dp"
+            android:text="Water"
+            android:layout_below="@id/dailyCalories"/>
+
+        <TextView
+            android:id="@+id/dailyWaterNumber"
+            android:layout_width="100dp"
+            android:layout_height="55dp"
+            android:gravity="center"
+            android:text="1.5L"
+            android:paddingTop="@dimen/food_number_field_top_padding"
+            android:textColor="@color/purple_700"
+            android:textSize="22dp"
+            android:layout_toRightOf="@+id/dailyCalories"
+            android:layout_below="@id/dailyCalorieNumber" />
+
+        <TextView
+            android:id="@+id/macrosHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/purple_500"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:text="@string/MACROS"
+            android:layout_below="@id/dailyWater"/>
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:paddingTop="30dp"
+            android:id="@+id/pieChart"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            android:layout_below="@id/macrosHeader"/>
+
+        <TextView
+            android:id="@+id/dailyProtein"
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/red"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:text="@string/Protein"
+            android:layout_below="@id/pieChart"/>
+
+        <TextView
+            android:id="@+id/dailyProteinGrams"
+            android:layout_width="100dp"
+            android:layout_height="55dp"
+            android:layout_below="@id/pieChart"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="-1dp"
+            android:layout_toEndOf="@+id/dailyProtein"
+            android:layout_toRightOf="@+id/dailyProtein"
+            android:gravity="center"
+            android:paddingTop="@dimen/food_number_field_top_padding"
+            android:text="182"
+            android:textColor="@color/purple_700"
+            android:textSize="22dp" />
+
+        <TextView
+            android:id="@+id/dailyCarbs"
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/green"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:text="@string/Carbohydrates"
+            android:layout_below="@id/dailyProtein"/>
+
+        <TextView
+            android:id="@+id/dailyCarbGrams"
+            android:layout_width="100dp"
+            android:layout_height="55dp"
+            android:gravity="center"
+            android:text="182"
+            android:paddingTop="@dimen/food_number_field_top_padding"
+            android:textColor="@color/purple_700"
+            android:textSize="22dp"
+            android:layout_toRightOf="@+id/dailyCarbs"
+            android:layout_below="@id/dailyProtein" />
+
+        <TextView
+            android:id="@+id/dailyFats"
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:text="@string/Fat"
+            android:layout_below="@id/dailyCarbs"/>
+
+        <TextView
+            android:id="@+id/dailyFatGrams"
+            android:layout_width="100dp"
+            android:layout_height="55dp"
+            android:paddingTop="@dimen/food_number_field_top_padding"
+            android:gravity="center"
+            android:text="182"
+            android:textColor="@color/purple_700"
+            android:textSize="22dp"
+            android:layout_toRightOf="@+id/dailyFats"
+            android:layout_below="@id/dailyCarbGrams"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

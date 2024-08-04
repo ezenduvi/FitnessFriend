@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.FoodItemPageActivity">
+
+    <include
+        layout="@layout/food_item_toolbar"
+        android:id="@+id/toolbarSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="-2dp" />
+
+    <ImageView
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_check_24"
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="545dp"
+        android:onClick="addFoodOnClick"/>
+
+    <TextView
+        android:id="@+id/calorieField"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/black"
+        android:textSize="22dp"
+        android:text="Calories"
+        android:layout_below="@id/toolbarSection"/>
+
+    <TextView
+        android:id="@+id/numberOfCalories"
+        android:layout_width="100dp"
+        android:layout_height="55dp"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:text="182"
+        android:paddingTop="@dimen/food_number_field_top_padding"
+        android:textColor="@color/purple_700"
+        android:textSize="22dp"
+        android:layout_toRightOf="@+id/calorieField"
+        android:layout_below="@id/toolbarSection" />
+
+    <TextView
+        android:id="@+id/servingSizeField"
+        android:layout_width="450dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/black"
+        android:textSize="22dp"
+        android:text="Serving Size"
+        android:layout_below="@id/calorieField"/>
+
+    <TextView
+        android:id="@+id/servingSizeNumber"
+        android:layout_width = "150dp"
+        android:layout_height="55dp"
+        android:gravity="right"
+        android:text="1 cup"
+        android:paddingTop="@dimen/food_number_field_top_padding"
+        android:paddingRight="25dp"
+        android:textColor="@color/purple_700"
+        android:textSize="22dp"
+        android:layout_toRightOf="@+id/servingSizeField"
+        android:layout_below="@id/calorieField" />
+
+    <TextView
+        android:id="@+id/numServingsField"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/black"
+        android:textSize="22dp"
+        android:text="Number of Servings"
+        android:layout_below="@id/servingSizeField"/>
+
+    <TextView
+        android:id="@+id/numberOfServings"
+        android:layout_width="100dp"
+        android:gravity="center"
+        android:layout_height="55dp"
+        android:layout_centerVertical="true"
+        android:text="1"
+        android:paddingTop="@dimen/food_number_field_top_padding"
+        android:textColor="@color/purple_700"
+        android:textSize="22dp"
+        android:layout_toRightOf="@+id/numServingsField"
+        android:layout_below="@id/servingSizeField" />
+
+    <TextView
+        android:id="@+id/macrosHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_500"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="22dp"
+        android:text="@string/MACROS"
+        android:layout_below="@id/numServingsField"/>
+
+    <TextView
+        android:id="@+id/proteinField"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/black"
+        android:textSize="22dp"
+        android:text="@string/Protein"
+        android:layout_below="@id/macrosHeader"/>
+
+    <TextView
+        android:id="@+id/proteinGrams"
+        android:layout_width="100dp"
+        android:layout_height="55dp"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text="182"
+        android:paddingTop="@dimen/food_number_field_top_padding"
+        android:textColor="@color/purple_700"
+        android:textSize="22dp"
+        android:layout_toRightOf="@+id/proteinField"
+        android:layout_below="@id/macrosHeader" />
+
+    <TextView
+        android:id="@+id/carbField"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/black"
+        android:textSize="22dp"
+        android:text="@string/Carbohydrates"
+        android:layout_below="@id/proteinField"/>
+
+    <TextView
+        android:id="@+id/carbGrams"
+        android:layout_width="100dp"
+        android:layout_height="55dp"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text="182"
+        android:paddingTop="@dimen/food_number_field_top_padding"
+        android:textColor="@color/purple_700"
+        android:textSize="22dp"
+        android:layout_toRightOf="@+id/carbField"
+        android:layout_below="@id/proteinField" />
+
+    <TextView
+        android:id="@+id/fatField"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/black"
+        android:textSize="22dp"
+        android:text="@string/Fat"
+        android:layout_below="@id/carbField"/>
+
+    <TextView
+        android:id="@+id/fatGrams"
+        android:layout_width="100dp"
+        android:layout_height="55dp"
+        android:layout_centerVertical="true"
+        android:paddingTop="@dimen/food_number_field_top_padding"
+        android:gravity="center"
+        android:text="182"
+        android:textColor="@color/purple_700"
+        android:textSize="22dp"
+        android:layout_toRightOf="@+id/fatField"
+        android:layout_below="@id/carbField" />
+
+</RelativeLayout>

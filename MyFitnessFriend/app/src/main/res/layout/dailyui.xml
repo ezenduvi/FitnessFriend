@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbarSection"
+        layout="@layout/dailyui_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="-2dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbarSection">
+
+            <!-- calorie calculation -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/calorie_calculations">
+
+                <TextView
+                    android:id="@+id/calorie_goal_number"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="25dp"
+                    android:paddingLeft="25dp"
+                    android:layout_marginLeft="12dp"
+                    android:textAlignment="center"
+                    android:paddingRight="25dp"
+                    android:textSize="22dp"
+                    android:text="1200"
+                    android:textStyle=""
+                    android:textColor="@color/purple_700"/>
+
+                <TextView
+                    android:id="@+id/calorie_goal"
+                    android:layout_width="125dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_height="25dp"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:textAlignment="center"
+                    android:text="@string/Goal"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/calorie_calculation_text_size"
+                    android:layout_below="@id/calorie_goal_number"/>
+
+                <ImageView
+                    android:id="@+id/minus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="105dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="0dp"
+                    android:layout_toRightOf="@id/calorie_goal"
+                    android:src="@drawable/ic_minus" />
+
+                <TextView
+                    android:id="@+id/calorie_food_number"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:paddingTop="25dp"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:textSize="22dp"
+                    android:text="1200"
+                    android:textColor="@color/purple_700"
+                    android:layout_toRightOf="@id/minus"/>
+
+                <TextView
+                    android:id="@+id/calories_consumed"
+                    android:layout_width="125dp"
+                    android:layout_height="25dp"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:textAlignment="center"
+                    android:text="@string/Food"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/calorie_calculation_text_size"
+                    android:layout_toRightOf="@id/minus"
+                    android:gravity="center"
+                    android:layout_below="@id/calorie_food_number"/>
+
+                <ImageView
+                    android:id="@+id/add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="105dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="0dp"
+                    android:layout_toRightOf="@id/calories_consumed"
+                    android:src="@drawable/ic_add" />
+
+                <TextView
+                    android:id="@+id/calorie_exercise_number"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="25dp"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:textAlignment="center"
+                    android:textSize="22dp"
+                    android:text="0"
+                    android:textColor="@color/purple_700"
+                    android:layout_toRightOf="@id/add"/>
+
+                <TextView
+                    android:id="@+id/calories_burned"
+                    android:layout_width="125dp"
+                    android:layout_height="25dp"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:textAlignment="center"
+                    android:text="@string/exercise"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/calorie_calculation_text_size"
+                    android:layout_toRightOf="@id/add"
+                    android:gravity="center"
+                    android:layout_below="@id/calorie_exercise_number"/>
+
+                <ImageView
+                    android:id="@+id/equals"
+                    android:layout_width="wrap_content"
+                    android:layout_height="105dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="0dp"
+                    android:layout_toRightOf="@id/calories_burned"
+                    android:src="@drawable/ic_equals"/>
+
+                <TextView
+                    android:id="@+id/calories_remaining_number"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="25dp"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:textAlignment="center"
+                    android:textSize="22dp"
+                    android:text="0"
+                    android:textColor="@color/purple_700"
+                    android:layout_toRightOf="@id/equals"/>
+
+                <TextView
+                    android:id="@+id/calories_remaining"
+                    android:layout_width="125dp"
+                    android:layout_height="25dp"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:textAlignment="center"
+                    android:text="@string/Remaining"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/calorie_calculation_text_size"
+                    android:layout_toRightOf="@id/equals"
+                    android:gravity="center"
+                    android:layout_below="@id/calories_remaining_number"/>
+
+                <TextView
+                    android:id="@+id/breakfastHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/purple_500"
+                    android:layout_marginTop="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="2.5dp"
+                    android:paddingBottom="2.5dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="22dp"
+                    android:text="@string/Breakfast"
+                    android:layout_below="@id/calorie_goal"/>
+
+                <TextView
+                    android:id="@+id/totalBreakfastCalories"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="500dp"
+                    android:paddingRight="25dp"
+                    android:paddingTop="2.5dp"
+                    android:gravity="right"
+                    android:paddingBottom="2.5dp"
+                    android:text="100"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="22dp"
+                    android:layout_below="@id/calorie_goal"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/breakfastList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/breakfastHeader"/>
+
+                <Button
+                    android:id="@+id/breakfastButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add Food"
+                    android:layout_below="@id/breakfastList"
+                    android:onClick="addFoodOnClick"/>
+
+                <TextView
+                    android:id="@+id/lunchHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/purple_500"
+                    android:layout_marginTop="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="2.5dp"
+                    android:paddingBottom="2.5dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="22dp"
+                    android:text="@string/Lunch"
+                    android:layout_below="@id/breakfastButton" />
+
+                <TextView
+                    android:id="@+id/totalLunchCalories"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="500dp"
+                    android:paddingRight="25dp"
+                    android:paddingTop="2.5dp"
+                    android:gravity="right"
+                    android:paddingBottom="2.5dp"
+                    android:text="100"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="22dp"
+                    android:layout_below="@id/breakfastButton"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/lunchList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/lunchHeader"/>
+
+                <Button
+                    android:id="@+id/lunchButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add Food"
+                    android:layout_below="@id/lunchList"
+                    android:onClick="addFoodOnClick"/>
+
+                <TextView
+                    android:id="@+id/dinnerHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/purple_500"
+                    android:layout_marginTop="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="2.5dp"
+                    android:paddingBottom="2.5dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="22dp"
+                    android:text="@string/Dinner"
+                    android:layout_below="@id/lunchButton" />
+
+                <TextView
+                    android:id="@+id/totalDinnerCalories"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="500dp"
+                    android:paddingRight="25dp"
+                    android:paddingTop="2.5dp"
+                    android:gravity="right"
+                    android:paddingBottom="2.5dp"
+                    android:text="100"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="22dp"
+                    android:layout_below="@id/lunchButton"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/dinnerList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/dinnerHeader"/>
+
+                <Button
+                    android:id="@+id/dinnerButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add Food"
+                    android:layout_below="@id/dinnerList"
+                    android:onClick="addFoodOnClick"/>
+
+                <TextView
+                    android:id="@+id/snackHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/purple_500"
+                    android:layout_marginTop="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="2.5dp"
+                    android:paddingBottom="2.5dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="22dp"
+                    android:text="@string/Snack"
+                    android:layout_below="@id/dinnerButton" />
+
+                <TextView
+                    android:id="@+id/totalSnackCalories"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="500dp"
+                    android:paddingRight="25dp"
+                    android:paddingTop="2.5dp"
+                    android:gravity="right"
+                    android:paddingBottom="2.5dp"
+                    android:text="100"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="22dp"
+                    android:layout_below="@id/dinnerButton"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/snackList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/snackHeader"/>
+
+                <Button
+                    android:id="@+id/snackButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add Food"
+                    android:layout_below="@id/snackList"
+                    android:onClick="addFoodOnClick"/>
+
+                <TextView
+                    android:id="@+id/waterHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/purple_500"
+                    android:layout_marginTop="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="2.5dp"
+                    android:paddingBottom="2.5dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="22dp"
+                    android:text="@string/Water"
+                    android:layout_below="@id/snackButton" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/waterList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/waterHeader"/>
+
+                <Button
+                    android:id="@+id/waterButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add Water"
+                    android:layout_below="@id/waterList"
+                    android:onClick="addWaterOnClick"/>
+
+                <Button
+                    android:id="@+id/viewDailySummaryButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ViewDailySummary"
+                    android:textColor="@color/white"
+                    android:background="@color/purple_500"
+                    android:layout_below="@id/waterButton"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginLeft="@dimen/view_summary_button_margin_left"
+                    android:padding="@dimen/view_summary_button_padding"
+                    android:onClick="dailySummaryOnClick"/>
+
+                <Button
+                    android:id="@+id/viewWeeklySummaryButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ViewWeeklySummary"
+                    android:layout_below="@id/waterButton"
+                    android:background="@color/purple_500"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="25dp"
+                    android:layout_toRightOf="@id/viewDailySummaryButton"
+                    android:layout_marginLeft="100dp"
+                    android:padding="@dimen/view_summary_button_padding"
+                    android:onClick="weeklySummaryOnClick"/>
+
+                <Button
+                    android:id="@+id/profileButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View Profile"
+                    android:layout_below="@id/waterButton"
+                    android:background="@color/purple_500"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="25dp"
+                    android:padding="@dimen/view_summary_button_padding"
+                    android:onClick="profileOnClick"/>
+
+                <Button
+                    android:id="@+id/exerciseButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View Exercise"
+                    android:layout_below="@id/waterButton"
+                    android:background="@color/purple_500"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginBottom="25dp"
+                    android:padding="@dimen/view_summary_button_padding"
+                    android:onClick="exerciseOnClick"/>
+
+                <Button
+                    android:id="@+id/addReflectionButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/viewDailySummaryButton"
+                    android:layout_alignEnd="@+id/viewWeeklySummaryButton"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="-61dp"
+                    android:layout_marginBottom="25dp"
+                    android:background="@color/purple_500"
+                    android:padding="@dimen/view_summary_button_padding"
+                    android:text="ADD REFLECTION"
+                    android:textColor="@color/white"
+                    android:onClick="reflectionOnClick"/>
+
+            </RelativeLayout>
+
+            <!-- Breakfast -->
+
+        </RelativeLayout>
+
+    </ScrollView>
+</LinearLayout>
