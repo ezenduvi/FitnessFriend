@@ -1,6 +1,10 @@
-# fitnessFriend
+# my-fitness-friend
+
+Team members:		Kevin Derksen, Victor Ezendu, Ana Ignat, Weixi Sun, Andrea Unrau
 
 Packages and major source code files:	The packages consist of Application, Business, Objects, Persistence, Presentation. The unit tests and test suite are in the package com.example.myfitnessfriend. The app is designed using 3-layer architecture. For the domain-specific objects, there is Day class which consists of 4 different Meals objects plus a Meals object for water. The Meals class consists of an arraylist of type Food to hold all the foods consumed in one meal. The Food class is for the creation of individual food objects to populate the database. The User class creates a new user that has a name, email, and calorie & water goals. Future iterations will allow a user profile picture. There are two enum classes: MealType and Unit which is the serving unit for the food objects. NEWLY ADDED FOR ITERATION 2: A services class was added for the purposes of dependency injection. A new class Calculate to handle calculations was added to the business layer, as was a new AccessExercise class. One new domain-specific object was created, Exercise. As required, HSQLDB has been utilized alongside the stub database. NEWLY ADDED FOR ITERATION 3: Acceptance and integration tests were added to this iteration, along with a new Diary object class and AccessDiary & AccessDay business classes. The test folders and classes were restructured as required.
+
+Github private repo:	https://github.com/anaignat/my-fitness-friend
 
 Developer log:	The developer log was maintained in a shared Google Sheets file.
 
